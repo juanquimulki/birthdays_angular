@@ -1,0 +1,25 @@
+<div class="content">
+
+<form [formGroup]="filterForm">
+<mat-form-field style="width: 50px;">
+    <mat-label>Día</mat-label>
+    <mat-select formControlName="day">
+      <mat-option *ngFor="let day of days" [value]="day.id">
+        {{day.desc}}
+      </mat-option>
+    </mat-select>
+</mat-form-field>&nbsp;
+
+<mat-form-field>
+    <mat-label>Mes</mat-label>
+    <mat-select formControlName="month">
+      <mat-option *ngFor="let month of months" [value]="month.id">
+        {{month.desc}}
+      </mat-option>
+    </mat-select>
+</mat-form-field>&nbsp;
+
+<button mat-raised-button color="accent" (click)="show();">Mostrar</button>
+</form>
+
+</div>
